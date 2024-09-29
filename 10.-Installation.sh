@@ -1,4 +1,4 @@
-set -e
+#set -e
 #!/bin/bash
 USER=$(id -u)
 
