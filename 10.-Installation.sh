@@ -20,3 +20,11 @@ else
 fi
 
 dnf install zip -y
+
+if [ $? -ne 0 ]
+then
+    echo "The installation if zip is falure"
+    exit 1
+else
+    echo "mysql installation success"
+fi
