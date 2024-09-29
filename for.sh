@@ -20,7 +20,7 @@ else
 fi
 }
 
-for i in (cat $SOFT)
+for i in "cat $SOFT"
 do 
     dnf install $i -y
     VALIDATE $? "The $i"
