@@ -7,3 +7,4 @@ echo "Present working dirtectory: $PWD"
 echo "Home directory of the current user: $HOME"
 echo "which user is running this script: $USER"
 echo "Host name of the server: $HOSTNAME"
+echo "Process ID of the current shell script: $$'
