@@ -1,0 +1,9 @@
+#!/bin/bash
+
+movies=("RRR" "DJ" "Atahdu")
+#Sie of the array is 3.
+#Index are 0, 1, 2.
+#List always start sith 0.
+
+echo "1st movies is: ${movies$[0]}"
+echo "The list of the movies are: 
