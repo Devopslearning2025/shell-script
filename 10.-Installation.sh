@@ -9,4 +9,14 @@ else
     echo "You are super user"
 fi
 
-dnf install mysql -y
+dnf install mysql -yy
+
+if [ $? -ne 0 ]
+then
+    echo "The installation if mysql is falure"
+    exit 1
+else
+    echo "mysql installation success"
+fi
+
+dnf install zip -y
