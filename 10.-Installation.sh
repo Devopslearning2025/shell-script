@@ -1,12 +1,12 @@
 #!/bin/bash
 USER=$(id -u)
 
-if [ $USER -eq 0]
+if [ $USER -ne 0 ]
 then
-    echo "you are with root user"
+    echo "Please run this script with root access"
     exit 1
 else
-    echo "please run with root user"
+    echo "You are super user"
 fi
 
 dnf install mysql -y
