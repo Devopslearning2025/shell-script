@@ -8,4 +8,6 @@ echo "Enter the password: "
 # read PASSWORD #PASSWORD is avariable and we can see while typing
 read -s PASSWORD #PASSWORD is avariable and we cann't see while typing
 
-echo "the user name is: $USERNAME and the password is: $PASSWORD"
+read -p "Enter the site: " SITE
+
+echo "the user name is: $USERNAME and the password is: $PASSWORD and the site is $SITE"
