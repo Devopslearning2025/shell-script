@@ -3,6 +3,12 @@ USER=$(id -u)
 TIME=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0|cut -d "." -f1)
 LOG=/tmp/$SCRIPTNAME-$TIME.log
+RED="\e[31m"
+GREEN="\e[32m"
+YELLOW="\e[33m"
+NORMAL="\e[]0m"
+
+echo "Script started at $TIME: "
 
 if [ $USER -ne 0 ]
 then
@@ -15,10 +21,10 @@ fi
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-    echo "$2 installation is failure"
+    echo -e " $2 ...$RED installation is failure $NORMAL"
     exit 1
 else
-    echo " $2 installation is success"
+    echo -e "$2..$GREEN  installation is success $NORMAL"
 fi
 }
 
