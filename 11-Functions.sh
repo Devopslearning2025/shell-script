@@ -2,13 +2,13 @@
 USER=$(id -u)
 TIME=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0|cut -d "." -f1)
-LOG=$SCRIPTNAME-$TIME.log
+LOG=/tmp/$SCRIPTNAME-$TIME.log
 if [ $USER -ne 0 ]
 then
     echo "Please run this script with root access"
     exit 1 #manually exit if error comes.
 else
-    echo "You are super user"
+    echo "You are super user" &>> $LOG
 fi
 
 VALIDATE (){
@@ -24,5 +24,5 @@ fi
 dnf install mysql -y &>> $LOG
 VALIDATE $? "The mysql"
 
-dnf install gzip -y &>> $LOG
-VALIDATE $? "The gzip"
+dnf install zip -y &>> $LOG
+VALIDATE $? "The zip"
