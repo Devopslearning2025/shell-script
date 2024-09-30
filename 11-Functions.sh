@@ -1,6 +1,8 @@
 #!/bin/bash
 USER=$(id -u)
-
+TIME=$(date +%F-%H-%M-%S)
+SCRIPTNAME=$(echo $0|cut -d "." -f1)
+LOG=/tmp/$SCRIPTNAME-$TIME.log
 if [ $USER -ne 0 ]
 then
     echo "Please run this script with root access"
@@ -12,10 +14,10 @@ fi
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-    echo "$2 installation is falure"
+    echo "$2 installation is falure" &>> $LOG
     exit 1
 else
-    echo "$2 installation success"
+    echo "$2 installation is success" &>> $LOG
 fi
 }
 
