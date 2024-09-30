@@ -3,6 +3,10 @@ USER=$(id -u)
 TIME=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0|cut -d "." -f1)
 LOG=/tmp/$SCRIPTNAME-$TIME.log
+RED=\e[31m
+GREEN=\e[32
+YELLOW=\e[33
+
 if [ $USER -ne 0 ]
 then
     echo "Please run this script with root access"
@@ -14,10 +18,10 @@ fi
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-    echo "$2 installation is falure" &>> $LOG
+    echo -e "$RED $2 installation is falure"
     exit 1
 else
-    echo "$2 installation is success" &>> $LOG
+    echo "$2 installation is success"
 fi
 }
 
