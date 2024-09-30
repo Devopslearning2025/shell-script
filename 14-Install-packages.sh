@@ -3,6 +3,10 @@ USER=$(id -u)
 TIME=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0|cut -d "." -f1)
 LOG=/tmp/$SCRIPTNAME-$TIME.log
+R="\e[33m"
+Y="\e[33m"
+G="\e[32m"
+N="\e[0m"
 
 if [ $USER -ne 0 ]
 then
@@ -13,26 +17,25 @@ else
 fi
 
 echo "all packages: $@"
-# VALIDATE (){
-# if [ $1 -ne 0 ]
-# then
-#     echo "$2 installation is falure"
-#     exit 1
-# else
-#     echo "$2 installation success"
-# fi
-# }
+VALIDATE (){
+if [ $1 -ne 0 ]
+then
+    echo -e "$2... $R installation is failure $N"
+    exit 1
+else
+    echo -e "$2... $G installation success $N"
+fi
+}
 
 for i in $@
 do
-    echo "packe to install $i"
+    echo "package to install $i"
     dnf list installed $i &>> $LOG
     if [ $? -eq 0 ]
     then
-        echo "$i already installed ...skipping"
+        echo -e "$i already installed ...$Y skipping $N"
     else
-        echo "$i not installed... need to install"
+        dnf install $i -y &>> $LOG
+        VALIDATE $? "The $i"
     fi
-    # dnf install $i -y
-    # VALIDATE $? "The $i"
 done
