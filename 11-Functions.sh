@@ -4,8 +4,8 @@ TIME=$(date +%F-%H-%M-%S)
 SCRIPTNAME=$(echo $0|cut -d "." -f1)
 LOG=/tmp/$SCRIPTNAME-$TIME.log
 RED=\e[31m
-GREEN=\e[32
-YELLOW=\e[33
+GREEN=\e[32m
+YELLOW=\e[33m
 
 if [ $USER -ne 0 ]
 then
@@ -18,7 +18,7 @@ fi
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-    echo -e "$RED $2 installation is falure"
+    echo -e "$RED $2 installation is failure"
     exit 1
 else
     echo -e "$GREEN $2 installation is success"
