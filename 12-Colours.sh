@@ -34,5 +34,5 @@ VALIDATE $? "The mysql"
 dnf install zip -y &>> $LOG
 VALIDATE $? "The zip"
 
-dnf install wrong -y
+dnf install wrong -y &>> $LOG
 VALIDATE $? "The wrong"
