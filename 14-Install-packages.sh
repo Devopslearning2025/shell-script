@@ -22,7 +22,7 @@ echo "all packages: $@"
 
 for i in $@
 do
-    echo "packe to install $@"
+    echo "packe to install $i"
     # dnf install $i -y
     # VALIDATE $? "The $i"
 done
