@@ -6,9 +6,9 @@ LOG=/tmp/$SCRIPTNAME-$TIME.log
 RED="\e[31m"
 GREEN="\e[32m"
 YELLOW="\e[33m"
-NORMAL="\e[]0m"
+NORMAL="\e[0m"
 
-echo "Script started at $TIME: "
+echo "Script started at: $TIME "
 
 if [ $USER -ne 0 ]
 then
