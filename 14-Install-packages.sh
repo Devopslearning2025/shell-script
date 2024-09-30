@@ -20,8 +20,9 @@ echo "all packages: $@"
 # fi
 # }
 
-# for i in $SOFT
-# do
-#     dnf install $i -y
-#     VALIDATE $? "The $i"
-# done
+for i in $@
+do
+    echo "packe to install $@"
+    # dnf install $i -y
+    # VALIDATE $? "The $i"
+done
