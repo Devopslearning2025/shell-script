@@ -20,10 +20,10 @@ echo "all packages: $@"
 VALIDATE (){
 if [ $1 -ne 0 ]
 then
-    echo -e "$2... $R installation is failure $N"
+    echo -e "$2... installation is  $R failure $N"
     exit 1
 else
-    echo -e "$2... $G installation success $N"
+    echo -e "$2... installation $G success $N"
 fi
 }
 
