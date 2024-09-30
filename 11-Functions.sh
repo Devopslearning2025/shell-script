@@ -21,8 +21,8 @@ else
 fi
 }
 
-dnf install mysql -y
+dnf install mysql -y &>> $LOG
 VALIDATE $? "The mysql"
 
-dnf install gzip -y
+dnf install gzip -y &>> $LOG
 VALIDATE $? "The gzip"
