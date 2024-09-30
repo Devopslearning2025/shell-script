@@ -21,7 +21,7 @@ then
     echo -e "$RED $2 installation is falure"
     exit 1
 else
-    echo "$2 installation is success"
+    echo -e "$GREEN $2 installation is success"
 fi
 }
 
