@@ -1,6 +1,6 @@
 #!/bin/bash
 USER=$(id -u)
-SOFT=("mysql",  "zip",  "git")
+SOFT="mysql zip git"
 
 if [ $USER -ne 0 ]
 then
@@ -20,8 +20,8 @@ else
 fi
 }
 
-for i in ${SOFT[@]}
-do 
+for i in $SOFT
+do
     dnf install $i -y
     VALIDATE $? "The $i"
 done
