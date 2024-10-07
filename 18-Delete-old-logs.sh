@@ -23,5 +23,5 @@ echo "$FILES";echo ""
 while read line
 do
     echo "deleting file is: $line"
-    #rm -rf $line
+    rm -rf $line
 done  <<< $FILES
