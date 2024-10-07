@@ -14,3 +14,5 @@ else
     echo -e  "$R please make sure $SOURCE_DIR folder exists $N"
     exit 1
 fi
+
+FILES=$(find $SOURCE_DIR -name *.log -mtime +4)
