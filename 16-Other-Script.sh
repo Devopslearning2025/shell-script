@@ -2,4 +2,5 @@
 
 COURSE="Devops from other script"
 
-echo "Before calling other script, course: $COURSE"
+echo "variable value from other script, course: $COURSE"
+echo "process ID of other script $$"
