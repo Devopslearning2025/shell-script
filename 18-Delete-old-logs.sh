@@ -20,8 +20,8 @@ FILES=$(find $SOURCE_DIR -name *.log -mtime +4)
 echo "$FILES"
 
 #while IFS= read -r line
-while IFS= read -r line
+while read line
 do
     echo "deleting file is: $line"
     #rm -rf $line
-done  < $FILES
+done  <<< $FILES
