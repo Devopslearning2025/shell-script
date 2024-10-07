@@ -6,6 +6,6 @@ echo "Before calling other script, course: $COURSE"
 
 echo "Process ID of current script: $$"
 
-./16-Other-script.sh
+./16-Other-Script.sh
 
 echo "Process ID of current script: $$"
