@@ -15,9 +15,9 @@ else
     exit 1
 fi
 
-FILES=$(find $SOURCE_DIR -name *.log -mtime +4)
+FILES=$(find $SOURCE_DIR -name *.log -mtime +30)
 
-echo "$FILES";echo ""
+echo "this are the files which are older than 30days $FILES";echo ""
 
 #while IFS= read -r line
 while read line
