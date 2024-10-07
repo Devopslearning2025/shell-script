@@ -17,7 +17,7 @@ fi
 
 FILES=$(find $SOURCE_DIR -name *.log -mtime +4)
 
-echo "$FILES"
+echo "$FILES";echo ""
 
 #while IFS= read -r line
 while read line
