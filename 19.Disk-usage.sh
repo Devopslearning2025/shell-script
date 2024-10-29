@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DISK_USAGE=$(df -hT|grep xfs)
+DISK_USAGE=$(df -hT|grep dev)
 DISK_THRESHOLD=5
 MESSAGE=""
 
